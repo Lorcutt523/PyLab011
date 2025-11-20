@@ -29,7 +29,12 @@ class MindMapComposite(object):
 
 
     def display(self, indent=0):
-        print(" " * indent + str(self))
+        if indent == 0:
+            print('mindmap\n  root', end='')
+            print(" " * indent + str(self))
+            indent += 2
+        else:
+            print(" " * indent + str(self))
         for child in self.children:
             child.display(indent+2)
 
