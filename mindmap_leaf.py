@@ -15,7 +15,7 @@ class MindMapLeaf:
             "bang": ")){}((",
             "rectangle": "{}",
         }
-        return shape_d.get(shape)
+        return shape_d.get(shape, "{}")
 
 
     def display(self, indent=0):
